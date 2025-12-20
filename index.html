@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>पिंपळगाव ग्रामपंचायत</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <!-- लोडिंग स्क्रीन -->
+  <div id="loading" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">
+        <h3>पिंपळगाव ग्रामपंचायत</h3>
+        <p>लोड करत आहे...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- हेडर -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <div class="header-top">
+        <div class="village-info">
+          <h1 id="village-name" class="animate__animated animate__fadeInDown">पिंपळगाव</h1>
+          <p id="slogan" class="animate__animated animate__fadeInUp">हेमाडपंथी शिव मंदिराचे गाव</p>
+        </div>
+        <div class="header-actions">
+          <div class="current-time" id="current-time">
+            <i class="fas fa-clock"></i>
+            <span id="time-display"></span>
+          </div>
+          <button id="theme-toggle" class="theme-btn" title="थीम बदला">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="admin.html" class="admin-link">
+            <i class="fas fa-user-shield"></i> प्रशासक
+          </a>
+        </div>
+      </div>
+
+      <nav class="main-nav" id="main-nav">
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> मुख्यपृष्ठ</a></li>
+          <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> गावाबद्दल</a></li>
+          <li><a href="#events" class="nav-link"><i class="fas fa-calendar-alt"></i> कार्यक्रम</a></li>
+          <li><a href="#works" class="nav-link"><i class="fas fa-hammer"></i> गाव कामे</a></li>
+          <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> फोटो गॅलरी</a></li>
+          <li><a href="#notices" class="nav-link"><i class="fas fa-bullhorn"></i> सूचना</a></li>
+          <li><a href="#map" class="nav-link"><i class="fas fa-map-marked-alt"></i> नकाशा</a></li>
+          <li><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> संपर्क</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- मुख्य सामग्री -->
+  <main class="main-content" id="main-content">
+    <div class="container">
+      <!-- होम सेक्शन -->
+      <section id="home" class="section active">
+        <div class="hero-section">
+          <div class="hero-content">
+            <h2 class="section-title animate__animated animate__fadeInLeft">ग्रामीण संस्कृतीचे अभिमान</h2>
+            <p class="hero-text animate__animated animate__fadeInLeft animate__delay-1s">पिंपळगाव हे ऐतिहासिक हेमाडपंथी शिव मंदिरासाठी प्रसिद्ध असलेले गाव आहे. निसर्गरम्य वातावरणात वसलेले हे गाव शांतता आणि संस्कृतीचे प्रतीक आहे.</p>
+            
+            <div class="hero-stats">
+              <div class="stat-card animate__animated animate__fadeInUp animate__delay-2s">
+                <i class="fas fa-users"></i>
+                <h3 id="population-count">५,२००</h3>
+                <p>लोकसंख्या</p>
+              </div>
+              <div class="stat-card animate__animated animate__fadeInUp animate__delay-2.2s">
+                <i class="fas fa-home"></i>
+                <h3 id="house-count">१,०५०</h3>
+                <p>घरे</p>
+              </div>
+              <div class="stat-card animate__animated animate__fadeInUp animate__delay-2.4s">
+                <i class="fas fa-calendar-check"></i>
+                <h3 id="event-count">३</h3>
+                <p>सक्रिय कार्यक्रम</p>
+              </div>
+              <div class="stat-card animate__animated animate__fadeInUp animate__delay-2.6s">
+                <i class="fas fa-tasks"></i>
+                <h3 id="work-count">५</h3>
+                <p>चालू कामे</p>
+              </div>
+            </div>
+            
+            <div class="hero-buttons">
+              <a href="#about" class="btn-primary animate__animated animate__fadeInUp animate__delay-3s">
+                <i class="fas fa-book-open"></i> गावाबद्दल जाणा
+              </a>
+              <a href="#gallery" class="btn-secondary animate__animated animate__fadeInUp animate__delay-3.2s">
+                <i class="fas fa-camera"></i> फोटो पहा
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-image">
+            <div class="image-slider">
+              <div class="slider-item active">
+                <img src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ग्रामीण दृश्य">
+                <div class="image-caption">गावाचे नैसर्गिक सौंदर्य</div>
+              </div>
+              <div class="slider-item">
+                <img src="https://images.unsplash.com/photo-1564501049418-3c27787d01e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="शिव मंदिर">
+                <div class="image-caption">हेमाडपंथी शिव मंदिर</div>
+              </div>
+              <div class="slider-item">
+                <img src="https://images.unsplash.com/photo-1586769852044-692eb57e5d0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="शेती प्रदेश">
+                <div class="image-caption">सुपीक शेती प्रदेश</div>
+              </div>
+            </div>
+            <div class="slider-controls">
+              <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ताजी सूचना -->
+        <div class="quick-notices">
+          <h3><i class="fas fa-bell"></i> ताजी सूचना</h3>
+          <div class="notice-ticker">
+            <div class="ticker-content">
+              <span class="ticker-item"><i class="fas fa-info-circle"></i> महाराष्ट्र दिन सोहळा १ मे रोजी सकाळी ९ वाजता</span>
+              <span class="ticker-item"><i class="fas fa-info-circle"></i> पाणी टंचाईमुळे पाण्याची बचत करण्याची विनंती</span>
+              <span class="ticker-item"><i class="fas fa-info-circle"></i> नवीन रस्ता बांधकाम काम सुरू, सावधगिरी बाळगावी</span>
+              <span class="ticker-item"><i class="fas fa-info-circle"></i> आरोग्य शिबिर १५ मे रोजी सकाळी १० ते ४ वाजेपर्यंत</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- गावाबद्दल सेक्शन -->
+      <section id="about" class="section">
+        <h2 class="section-title"><i class="fas fa-landmark"></i> गावाबद्दल</h2>
+        
+        <div class="about-intro">
+          <div class="about-text">
+            <h3>पिंपळगाव - इतिहास आणि संस्कृती</h3>
+            <p>पिंपळगाव हे महाराष्ट्रातील एक ऐतिहासिक गाव आहे जे प्रसिद्ध हेमाडपंथी शिव मंदिरासाठी ओळखले जाते. हे गाव सुमारे ५०० वर्षांपूर्वी स्थापन झाले. गावाची लोकसंख्या सुमारे ५२०० आहे आणि येथे सुमारे १०५० घरे आहेत.</p>
+            <p>गावात शिक्षण, आरोग्य, पाणीपुरवठा, विजेची सोय उपलब्ध आहे. गावात प्राथमिक शाळा, माध्यमिक शाळा, उच्च माध्यमिक शाळा, आरोग्य केंद्र, पोस्ट ऑफिस, बँक इत्यादी सुविधा उपलब्ध आहेत.</p>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="गावाचे दृश्य">
+          </div>
+        </div>
+        
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-history"></i>
+            </div>
+            <h3>इतिहास</h3>
+            <div class="about-content">
+              <p>गाव सुमारे ५०० वर्षांपूर्वी स्थापन झाले. हेमाडपंथी शिव मंदिर ४०० वर्षांपूर्वी बांधले गेले. गावाचे नाव येथील मोठ्या पिंपळाच्या झाडावरून पडले आहे.</p>
+            </div>
+          </div>
+          
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-map-marked-alt"></i>
+            </div>
+            <h3>स्थान</h3>
+            <div class="about-content">
+              <p>महाराष्ट्र राज्य, जिल्हा: औरंगाबाद, तालुका: सोयगाव. गाव समुद्रसपाटीपासून ५८० मीटर उंचीवर वसले आहे. हवामान समशीतोष्ण आहे.</p>
+            </div>
+          </div>
+          
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>शिक्षण</h3>
+            <div class="about-content">
+              <p>गावात प्राथमिक शाळा (१ली ते ४थी), माध्यमिक शाळा (५वी ते १०वी) आणि उच्च माध्यमिक शाळा (११वी-१२वी) आहे. सुमारे ८०० विद्यार्थी शिक्षण घेत आहेत.</p>
+            </div>
+          </div>
+          
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>सामाजिक संस्था</h3>
+            <div class="about-content">
+              <p>युवक मंडळ, महिला बचत गट (१२ गट), कृषी उत्पन्नकर्ता कंपनी, शिवाजी क्रीडा मंडळ, भजनी मंडळ इत्यादी संस्था कार्यरत आहेत.</p>
+            </div>
+          </div>
+          
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <h3>शेती</h3>
+            <div class="about-content">
+              <p>मुख्य पीक: कापूस, सोयाबीन, ज्वारी, बाजरी. सिंचनासाठी बोअरवेल, विहिरी आणि जलतलावाचा वापर केला जातो. ड्रिप इरिगेशन प्रोत्साहन दिले जाते.</p>
+            </div>
+          </div>
+          
+          <div class="about-card">
+            <div class="about-icon">
+              <i class="fas fa-water"></i>
+            </div>
+            <h3>जलस्रोत</h3>
+            <div class="about-content">
+              <p>गावात २ जलतलाव आहेत. २०० बोअरवेल, १५० विहिरी आहेत. नळ योजनेद्वारे प्रत्येक घरात पिण्याचे पाणी पुरवठा केला जातो.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- पंचायत सदस्य -->
+        <div class="panchayat-members">
+          <h3><i class="fas fa-users-cog"></i> ग्रामपंचायत सदस्य</h3>
+          <div class="members-grid">
+            <div class="member-card">
+              <div class="member-photo">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h4>सरपंच</h4>
+              <p>श्री. राजेश पाटील</p>
+              <p class="member-contact">९८७६५४३२१०</p>
+            </div>
+            
+            <div class="member-card">
+              <div class="member-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <h4>उपसरपंच</h4>
+              <p>श्रीमती. सुनीता जाधव</p>
+              <p class="member-contact">९८२३४५६७८९</p>
+            </div>
+            
+            <div class="member-card">
+              <div class="member-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <h4>सदस्य</h4>
+              <p>श्री. संतोष गायकवाड</p>
+              <p class="member-contact">९५६७८९०१२३</p>
+            </div>
+            
+            <div class="member-card">
+              <div class="member-photo">
+                <i class="fas fa-user"></i>
+              </div>
+              <h4>सदस्य</h4>
+              <p>श्रीमती. मंजिरा शिंदे</p>
+              <p class="member-contact">९८९०१२३४५६</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- कार्यक्रम सेक्शन -->
+      <section id="events" class="section">
+        <div class="section-header">
+          <h2 class="section-title"><i class="fas fa-calendar-week"></i> सप्ताह कार्यक्रम</h2>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">सर्व</button>
+            <button class="filter-btn" data-filter="येणारी">येणारी</button>
+            <button class="filter-btn" data-filter="चालू">चालू</button>
+            <button class="filter-btn" data-filter="पूर्ण">पूर्ण</button>
+          </div>
+        </div>
+        
+        <div id="events-container" class="events-grid">
+          <!-- कार्यक्रम डायनॅमिकली लोड होतील -->
+          <div class="loading-events">
+            <div class="spinner"></div>
+            <p>कार्यक्रम लोड करत आहे...</p>
+          </div>
+        </div>
+        
+        <!-- कॅलेंडर -->
+        <div class="event-calendar">
+          <h3><i class="fas fa-calendar-day"></i> कार्यक्रम कॅलेंडर</h3>
+          <div class="calendar-container">
+            <div class="calendar-header">
+              <button id="prev-month"><i class="fas fa-chevron-left"></i></button>
+              <h4 id="current-month">मे २०२४</h4>
+              <button id="next-month"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="calendar-grid" id="calendar-grid">
+              <!-- कॅलेंडर डायनॅमिकली तयार होईल -->
+            </div>
+            <div class="calendar-legend">
+              <div class="legend-item"><span class="legend-dot upcoming"></span> येणारी</div>
+              <div class="legend-item"><span class="legend-dot live"></span> चालू</div>
+              <div class="legend-item"><span class="legend-dot past"></span> पूर्ण</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- गाव कामे सेक्शन -->
+      <section id="works" class="section">
+        <div class="section-header">
+          <h2 class="section-title"><i class="fas fa-hard-hat"></i> गाव कामे</h2>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">सर्व</button>
+            <button class="filter-btn" data-filter="चालू">चालू</button>
+            <button class="filter-btn" data-filter="येणारी">येणारी</button>
+            <button class="filter-btn" data-filter="पूर्ण">पूर्ण</button>
+          </div>
+        </div>
+        
+        <div id="works-container" class="works-grid">
+          <!-- कामे डायनॅमिकली लोड होतील -->
+          <div class="loading-works">
+            <div class="spinner"></div>
+            <p>कामे लोड करत आहे...</p>
+          </div>
+        </div>
+        
+        <div class="works-progress">
+          <h3><i class="fas fa-chart-line"></i> प्रगती आढावा</h3>
+          <div class="progress-bars">
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>सडा बांधकाम</span>
+                <span>७५%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>जलनिधी</span>
+                <span>९०%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>विद्युतीकरण</span>
+                <span>१००%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>शाळा सुधारणा</span>
+                <span>६०%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="progress-item">
+              <div class="progress-label">
+                <span>आरोग्य केंद्र</span>
+                <span>८५%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- बजेट विवरण -->
+        <div class="budget-info">
+          <h3><i class="fas fa-rupee-sign"></i> आर्थिक आढावा</h3>
+          <div class="budget-cards">
+            <div class="budget-card">
+              <h4>एकूण बजेट</h4>
+              <p class="budget-amount">₹२५ लाख</p>
+              <p>२०२३-२४</p>
+            </div>
+            <div class="budget-card">
+              <h4>खर्च झाले</h4>
+              <p class="budget-amount">₹१८ लाख</p>
+              <p>७२% वापर</p>
+            </div>
+            <div class="budget-card">
+              <h4>उर्वरित</h4>
+              <p class="budget-amount">₹७ लाख</p>
+              <p>२८% शिल्लक</p>
+            </div>
+            <div class="budget-card">
+              <h4>नवीन प्रस्ताव</h4>
+              <p class="budget-amount">₹१२ लाख</p>
+              <p>२०२४-२५ साठी</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- फोटो गॅलरी सेक्शन -->
+      <section id="gallery" class="section">
+        <h2 class="section-title"><i class="fas fa-camera"></i> फोटो गॅलरी</h2>
+        
+        <div class="gallery-filter">
+          <button class="gallery-filter-btn active" data-category="all">सर्व</button>
+          <button class="gallery-filter-btn" data-category="मंदिर">मंदिर</button>
+          <button class="gallery-filter-btn" data-category="कार्यक्रम">कार्यक्रम</button>
+          <button class="gallery-filter-btn" data-category="कामे">कामे</button>
+          <button class="gallery-filter-btn" data-category="उत्सव">उत्सव</button>
+          <button class="gallery-filter-btn" data-category="सामान्य">सामान्य</button>
+        </div>
+        
+        <div id="gallery-container" class="gallery-grid">
+          <!-- फोटो डायनॅमिकली लोड होतील -->
+          <div class="loading-gallery">
+            <div class="spinner"></div>
+            <p>फोटो लोड करत आहे...</p>
+          </div>
+        </div>
+        
+        <!-- व्हिडिओ गॅलरी -->
+        <div class="video-gallery">
+          <h3><i class="fas fa-video"></i> व्हिडिओ गॅलरी</h3>
+          <div class="videos-grid">
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <i class="fas fa-play-circle"></i>
+                <img src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ग्राम दिन">
+              </div>
+              <h4>ग्राम दिन सोहळा २०२३</h4>
+              <p>२५ डिसेंबर २०२३</p>
+            </div>
+            
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <i class="fas fa-play-circle"></i>
+                <img src="https://images.unsplash.com/photo-1564501049418-3c27787d01e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="मंदिर">
+              </div>
+              <h4>महाशिवरात्री उत्सव</h4>
+              <p>१८ फेब्रुवारी २०२४</p>
+            </div>
+            
+            <div class="video-card">
+              <div class="video-thumbnail">
+                <i class="fas fa-play-circle"></i>
+                <img src="https://images.unsplash.com/photo-1586769852044-692eb57e5d0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="शेती">
+              </div>
+              <h4>कृषी मेळावा</h4>
+              <p>१० जानेवारी २०२४</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- मोडल फॉर फुलस्क्रीन इमेज -->
+        <div id="image-modal" class="modal">
+          <span class="close-modal">&times;</span>
+          <img class="modal-content" id="modal-image">
+          <div id="modal-caption"></div>
+          <button class="modal-nav prev"><i class="fas fa-chevron-left"></i></button>
+          <button class="modal-nav next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <!-- सूचना सेक्शन -->
+      <section id="notices" class="section">
+        <div class="section-header">
+          <h2 class="section-title"><i class="fas fa-bullhorn"></i> सूचना व जाहिराती</h2>
+          <div class="notice-actions">
+            <button id="notice-filter-all" class="notice-filter active">सर्व</button>
+            <button id="notice-filter-important" class="notice-filter">महत्वाच्या</button>
+            <button id="notice-filter-new" class="notice-filter">नवीन</button>
+            <button id="notice-filter-government" class="notice-filter">सरकारी</button>
+          </div>
+        </div>
+        
+        <div class="notices-container">
+          <div class="notices-list" id="notices-list">
+            <!-- सूचना डायनॅमिकली लोड होतील -->
+            <div class="loading-notices">
+              <div class="spinner"></div>
+              <p>सूचना लोड करत आहे...</p>
+            </div>
+          </div>
+          
+          <div class="notice-board">
+            <div class="notice-board-header">
+              <h3><i class="fas fa-clipboard-list"></i> सूचना फलक</h3>
+              <div class="current-date" id="current-date"></div>
+            </div>
+            <div class="notice-board-content">
+              <div class="marquee-container">
+                <div class="marquee-content" id="marquee-content">
+                  <div class="marquee-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>महाराष्ट्र दिन सोहळा १ मे रोजी सकाळी ९ वाजता ग्रामस्थांची सर्वांची सहभागाची विनंती.</span>
+                  </div>
+                  <div class="marquee-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>पाणी टंचाईमुळे पाण्याची बचत करण्याची विनंती. फवारणी टाकी वापरणे टाळावे.</span>
+                  </div>
+                  <div class="marquee-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>नवीन रस्ता बांधकाम काम सुरू आहे, सावधगिरी बाळगावी. मोटारसायकल हेल्मेट घालणे अनिवार्य.</span>
+                  </div>
+                  <div class="marquee-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>आरोग्य शिबिर १५ मे रोजी सकाळी १० ते ४ वाजेपर्यंत. सर्व नागरिकांनी सहभागी व्हावे.</span>
+                  </div>
+                  <div class="marquee-item">
+                    <i class="fas fa-info-circle"></i>
+                    <span>विद्युत बिल भरण्याची अंतिम तारीख २० मे आहे. वेळेत बिल भरावे.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- महत्वाच्या जाहिराती -->
+        <div class="important-announcements">
+          <h3><i class="fas fa-star"></i> महत्वाच्या जाहिराती</h3>
+          <div class="announcements-grid">
+            <div class="announcement-card important">
+              <div class="announcement-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <div class="announcement-content">
+                <h4>पाणी टंचाई तातडीची सूचना</h4>
+                <p>उन्हाळ्यामुळे पाण्याचा तुटवडा निर्माण झाला आहे. पाणी बचत करण्याची विनंती.</p>
+                <span class="announcement-date">२५ एप्रिल २०२४</span>
+              </div>
+            </div>
+            
+            <div class="announcement-card warning">
+              <div class="announcement-icon">
+                <i class="fas fa-traffic-light"></i>
+              </div>
+              <div class="announcement-content">
+                <h4>रस्ता बांधकाम मार्गदर्शन</h4>
+                <p>गावातील मुख्य रस्त्यावर बांधकाम सुरू आहे. पर्यायी मार्ग वापरावा.</p>
+                <span class="announcement-date">२० एप्रिल २०२४</span>
+              </div>
+            </div>
+            
+            <div class="announcement-card info">
+              <div class="announcement-icon">
+                <i class="fas fa-hand-holding-usd"></i>
+              </div>
+              <div class="announcement-content">
+                <h4>कृषी सबसिडी अर्ज</h4>
+                <p>कृषी सबसिडीसाठी अर्ज करण्याची अंतिम तारीख ३१ मे २०२४ आहे.</p>
+                <span class="announcement-date">१५ एप्रिल २०२४</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- नकाशा सेक्शन -->
+      <section id="map" class="section">
+        <h2 class="section-title"><i class="fas fa-map-pin"></i> आमचे स्थान</h2>
+        <div class="map-container">
+          <div class="map-wrapper">
+            <iframe 
+              id="map-iframe" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.324567890123!2d77.12345678901234!3d19.23456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd1b8a2b2b2b2b2%3A0x9b2b2b2b2b2b2b2!2sPimpalgaon%20Hemadpanthi%20Shiva%20Temple!5e0!3m2!1sen!2sin!4v1687856781915!5m2!1sen!2sin" 
+              width="100%" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="पिंपळगाव हेमाडपंथी शिव मंदिर नकाशा">
+            </iframe>
+          </div>
+          
+          <div class="map-info">
+            <h3><i class="fas fa-landmark"></i> पिंपळगाव हेमाडपंथी शिव मंदिर</h3>
+            <div class="location-details">
+              <div class="location-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <strong>पत्ता:</strong>
+                  <p>पिंपळगाव हेमाडपंथी शिव मंदिर, पिंपळगाव, महाराष्ट्र ४३१५०३</p>
+                </div>
+              </div>
+              
+              <div class="location-item">
+                <i class="fas fa-road"></i>
+                <div>
+                  <strong>प्रवेश मार्ग:</strong>
+                  <p>पिंपळगाव गावातून मुख्य रस्त्यावरून सोपा प्रवेश</p>
+                </div>
+              </div>
+              
+              <div class="location-item">
+                <i class="fas fa-history"></i>
+                <div>
+                  <strong>विशेष माहिती:</strong>
+                  <p>हेमाडपंथी वास्तुशैलीतील प्राचीन शिव मंदिर, ऐतिहासिक महत्वाचे</p>
+                </div>
+              </div>
+              
+              <div class="location-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>उघडण्याची वेळ:</strong>
+                  <p>सकाळी ६ वाजता ते संध्याकाळी ८ वाजता</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="map-actions">
+              <a href="https://maps.app.goo.gl/XGhVKA7Jaqgz5DZN9" 
+                 target="_blank" 
+                 class="map-action-btn">
+                <i class="fas fa-directions"></i> Google Maps वर पहा
+              </a>
+              <a href="https://www.google.com/maps/dir//Pimpalgaon+Hemadpanthi+Shiva+Temple/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3bd1b8a2b2b2b2b2:0x9b2b2b2b2b2b2b2?sa=X&ved=2ahUKEwjY2b3J4PqAAxXKcGwGHfVYANIQ9Rd6BAhEEAA" 
+                 target="_blank" 
+                 class="map-action-btn">
+                <i class="fas fa-route"></i> मार्ग दिशा
+              </a>
+              <button id="share-location" class="map-action-btn">
+                <i class="fas fa-share-alt"></i> शेअर करा
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- आसपासची ठिकाणे -->
+        <div class="nearby-places">
+          <h3><i class="fas fa-compass"></i> आसपासची महत्वाची ठिकाणे</h3>
+          <div class="places-grid">
+            <div class="place-card">
+              <div class="place-icon">
+                <i class="fas fa-school"></i>
+              </div>
+              <h4>पिंपळगाव शाळा</h4>
+              <p>०.५ किमी</p>
+              <span class="place-tag">शिक्षण</span>
+            </div>
+            
+            <div class="place-card">
+              <div class="place-icon">
+                <i class="fas fa-clinic-medical"></i>
+              </div>
+              <h4>ग्रामीण आरोग्य केंद्र</h4>
+              <p>१.२ किमी</p>
+              <span class="place-tag">आरोग्य</span>
+            </div>
+            
+            <div class="place-card">
+              <div class="place-icon">
+                <i class="fas fa-tint"></i>
+              </div>
+              <h4>जलतलाव</h4>
+              <p>२ किमी</p>
+              <span class="place-tag">पाणी स्रोत</span>
+            </div>
+            
+            <div class="place-card">
+              <div class="place-icon">
+                <i class="fas fa-bus"></i>
+              </div>
+              <h4>बस स्थानक</h4>
+              <p>१.५ किमी</p>
+              <span class="place-tag">परिवहन</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- संपर्क सेक्शन -->
+      <section id="contact" class="section">
+        <h2 class="section-title"><i class="fas fa-address-book"></i> संपर्क</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3>सरपंच</h3>
+              <p>श्री. राजेश पाटील</p>
+              <p><i class="fas fa-phone"></i> ९८७६५४३२१०</p>
+              <p><i class="fas fa-envelope"></i> sarpanch@pimpalgaon.gov.in</p>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-school"></i>
+              </div>
+              <h3>शाळा प्रमुख</h3>
+              <p>श्रीमती. सुनंदा देशमुख</p>
+              <p><i class="fas fa-phone"></i> ९८२३४५६७८९</p>
+              <p><i class="fas fa-envelope"></i> school@pimpalgaon.gov.in</p>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-clinic-medical"></i>
+              </div>
+              <h3>आरोग्य केंद्र</h3>
+              <p>डॉ. संजय जाधव</p>
+              <p><i class="fas fa-phone"></i> ९५६७८९०१२३</p>
+              <p><i class="fas fa-clock"></i> सकाळी ९ - संध्याकाळी ५</p>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <h3>आपत्कालीन</h3>
+              <p><i class="fas fa-phone"></i> पोलिस: १००</p>
+              <p><i class="fas fa-ambulance"></i> एम्ब्युलन्स: १०८</p>
+              <p><i class="fas fa-fire"></i> अग्निशामक: १०१</p>
+            </div>
+          </div>
+          
+          <div class="contact-form">
+            <h3><i class="fas fa-envelope"></i> संदेश पाठवा</h3>
+            <form id="message-form">
+              <div class="form-group">
+                <label for="sender-name"><i class="fas fa-user"></i> तुमचे नाव</label>
+                <input type="text" id="sender-name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="sender-phone"><i class="fas fa-phone"></i> मोबाईल नंबर</label>
+                <input type="tel" id="sender-phone" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="sender-email"><i class="fas fa-envelope"></i> ईमेल (ऐच्छिक)</label>
+                <input type="email" id="sender-email">
+              </div>
+              
+              <div class="form-group">
+                <label for="message-subject"><i class="fas fa-tag"></i> विषय</label>
+                <input type="text" id="message-subject" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message-content"><i class="fas fa-comment"></i> संदेश</label>
+                <textarea id="message-content" rows="4" required></textarea>
+              </div>
+              
+              <div class="form-group">
+                <label for="message-category"><i class="fas fa-filter"></i> प्रकार</label>
+                <select id="message-category">
+                  <option value="सुचना">सुचना</option>
+                  <option value="तक्रार">तक्रार</option>
+                  <option value="प्रश्न">प्रश्न</option>
+                  <option value="सेवा">सेवा मागणी</option>
+                  <option value="इतर">इतर</option>
+                </select>
+              </div>
+              
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-paper-plane"></i> संदेश पाठवा
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- ऑफिस वेळा -->
+        <div class="office-hours">
+          <h3><i class="fas fa-clock"></i> कार्यालयीन वेळ</h3>
+          <div class="hours-grid">
+            <div class="hour-card">
+              <h4>ग्रामपंचायत कार्यालय</h4>
+              <p>सोमवार ते शनिवार</p>
+              <p>सकाळी १० - दुपारी २ आणि संध्याकाळी ४ - रात्री ७</p>
+            </div>
+            <div class="hour-card">
+              <h4>आरोग्य केंद्र</h4>
+              <p>सोमवार ते शनिवार</p>
+              <p>सकाळी ९ - संध्याकाळी ५</p>
+            </div>
+            <div class="hour-card">
+              <h4>पोस्ट ऑफिस</h4>
+              <p>सोमवार ते शनिवार</p>
+              <p>सकाळी ९ - संध्याकाळी ४</p>
+            </div>
+            <div class="hour-card">
+              <h4>बँक</h4>
+              <p>सोमवार ते शुक्रवार</p>
+              <p>सकाळी १० - दुपारी ४</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- फूटर -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3><i class="fas fa-village"></i> पिंपळगाव ग्रामपंचायत</h3>
+          <p>हेमाडपंथी शिव मंदिराचे गाव</p>
+          <p class="footer-address">
+            <i class="fas fa-map-marker-alt"></i> पिंपळगाव, ता. सोयगाव, जि. औरंगाबाद, महाराष्ट्र - ४३१५०३
+          </p>
+          <p class="footer-phone">
+            <i class="fas fa-phone"></i> ०२४३८-२३४५६
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="link-column">
+            <h4>द्रुत लिंक</h4>
+            <ul>
+              <li><a href="#home"><i class="fas fa-chevron-right"></i> मुख्यपृष्ठ</a></li>
+              <li><a href="#about"><i class="fas fa-chevron-right"></i> गावाबद्दल</a></li>
+              <li><a href="#events"><i class="fas fa-chevron-right"></i> कार्यक्रम</a></li>
+              <li><a href="#works"><i class="fas fa-chevron-right"></i> कामे</a></li>
+            </ul>
+          </div>
+          
+          <div class="link-column">
+            <h4>महत्वाची लिंक</h4>
+            <ul>
+              <li><a href="#gallery"><i class="fas fa-chevron-right"></i> फोटो गॅलरी</a></li>
+              <li><a href="#notices"><i class="fas fa-chevron-right"></i> सूचना</a></li>
+              <li><a href="#map"><i class="fas fa-chevron-right"></i> नकाशा</a></li>
+              <li><a href="#contact"><i class="fas fa-chevron-right"></i> संपर्क</a></li>
+            </ul>
+          </div>
+          
+          <div class="link-column">
+            <h4>सरकारी वेबसाइट</h4>
+            <ul>
+              <li><a href="https://maharashtra.gov.in" target="_blank"><i class="fas fa-external-link-alt"></i> महाराष्ट्र शासन</a></li>
+              <li><a href="https://zppune.gov.in" target="_blank"><i class="fas fa-external-link-alt"></i> झिल्हा परिषद</a></li>
+              <li><a href="https://pmaymis.gov.in" target="_blank"><i class="fas fa-external-link-alt"></i> प्रधानमंत्री आवास योजना</a></li>
+              <li><a href="https://nrega.nic.in" target="_blank"><i class="fas fa-external-link-alt"></i> मनरेगा</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-social">
+          <h4>सोशल मीडिया</h4>
+          <div class="social-icons">
+            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          
+          <div class="footer-newsletter">
+            <p>नवीनतम माहितीसाठी सबस्क्राईब करा</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="तुमचा ईमेल" id="newsletter-email">
+              <button type="submit" id="newsletter-submit">पाठवा</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p><i class="far fa-copyright"></i> २०२४ पिंपळगाव ग्रामपंचायत. सर्व हक्क राखीव.</p>
+          <p class="footer-disclaimer">ही वेबसाइट गावाच्या विकासासाठी तयार केली आहे. सर्व माहिती अचूकतेसाठी प्रयत्न केले गेले आहेत.</p>
+        </div>
+        
+        <div class="footer-extra">
+          <p><i class="fas fa-users"></i> एकूण भेटी: <span id="visitor-count">१,२४५</span></p>
+          <p><i class="fas fa-calendar-day"></i> आजची तारीख: <span id="today-date"></span></p>
+          <p><i class="fas fa-clock"></i> अद्यतनित: <span id="last-updated">२४ मे २०२४</span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- बॅक टू टॉप बटण -->
+  <button id="back-to-top" class="back-to-top-btn">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- व्हॉट्सअप बटण -->
+  <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- स्क्रिप्ट्स -->
+  <script src="script.js"></script>
+</body>
+</html>
