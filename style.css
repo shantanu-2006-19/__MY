@@ -2372,3 +2372,195 @@ img {
   background-size: 1000px 100%;
   animation: shimmer 2s infinite linear;
 }
+/* =====================================================
+   🔹 MOBILE RESPONSIVE FINAL FIX (ADD AT END)
+   ===================================================== */
+
+/* ---------- GLOBAL FONT & SPACING ---------- */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* ---------- HEADER FIX ---------- */
+@media (max-width: 768px) {
+  .site-header {
+    padding-bottom: 0.5rem;
+  }
+
+  #village-name {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  #slogan {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .header-actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .current-time {
+    font-size: 0.85rem;
+  }
+}
+
+/* ---------- NAVIGATION MOBILE ---------- */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    display: none;
+    padding: 1rem;
+    z-index: 2000;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 1rem;
+  }
+}
+
+/* ---------- HERO SECTION ---------- */
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h2 {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+}
+
+/* ---------- STATS FIX ---------- */
+@media (max-width: 768px) {
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- IMAGE SLIDER ---------- */
+@media (max-width: 768px) {
+  .image-slider {
+    height: 280px;
+  }
+}
+
+/* ---------- EVENTS / WORKS ---------- */
+@media (max-width: 768px) {
+  .events-grid,
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-footer,
+  .work-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- GALLERY ---------- */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- MAP SECTION ---------- */
+@media (max-width: 768px) {
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrapper {
+    height: 280px;
+  }
+}
+
+/* ---------- CONTACT ---------- */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+}
+
+/* ---------- FOOTER ---------- */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* ---------- FLOAT BUTTONS ---------- */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+    bottom: 70px;
+  }
+
+  .back-to-top-btn {
+    width: 42px;
+    height: 42px;
+  }
+}
